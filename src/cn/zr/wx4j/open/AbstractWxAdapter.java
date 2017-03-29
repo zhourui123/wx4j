@@ -14,7 +14,6 @@ import cn.zr.wx4j.model.sendMsg.NewsMessage;
 import cn.zr.wx4j.model.sendMsg.TextMessage;
 import cn.zr.wx4j.model.sendMsg.VideoMessage;
 import cn.zr.wx4j.model.sendMsg.VoiceMessage;
-import cn.zr.wx4j.servlet.WxServlet;
 import cn.zr.wx4j.util.WxUtils;
 
 public abstract class AbstractWxAdapter implements WxAdapter {

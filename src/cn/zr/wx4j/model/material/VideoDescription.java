@@ -10,6 +10,10 @@ public class VideoDescription {
 		this.introduction = introduction;
 	}
 
+	public VideoDescription() {
+		super();
+	}
+
 	public String getTitle() {
 		return title;
 	}

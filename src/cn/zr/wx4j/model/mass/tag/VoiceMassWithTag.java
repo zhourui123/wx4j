@@ -1,9 +1,18 @@
 package cn.zr.wx4j.model.mass.tag;
 
-import cn.zr.wx4j.model.mass.MediaIdContainer;
+import cn.zr.wx4j.model.container.MediaIdContainer;
 
 public class VoiceMassWithTag extends BaseMassWithTag {
 	private MediaIdContainer voice;
+
+	public VoiceMassWithTag() {
+		super();
+	}
+
+	public VoiceMassWithTag(String msgtype, MassFilter filter, MediaIdContainer voice) {
+		super(msgtype, filter);
+		this.voice = voice;
+	}
 
 	public MediaIdContainer getVoice() {
 		return voice;
@@ -13,5 +22,4 @@ public class VoiceMassWithTag extends BaseMassWithTag {
 		this.voice = voice;
 	}
 
-	
 }

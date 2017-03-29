@@ -1,10 +1,19 @@
 package cn.zr.wx4j.model.mass.preview;
 
-import cn.zr.wx4j.model.mass.MediaIdContainer;
-import cn.zr.wx4j.model.mass.tag.BaseMassWithTag;
+import cn.zr.wx4j.model.container.MediaIdContainer;
 
 public class NewsPreviewMass extends BasePreviewMass {
 	private MediaIdContainer mpnews;
+
+	public NewsPreviewMass() {
+		super();
+	}
+
+	public NewsPreviewMass(String msgtype, String touser, MediaIdContainer mpnews) {
+		super(msgtype, touser);
+		this.mpnews = mpnews;
+	}
+
 	public MediaIdContainer getMpnews() {
 		return mpnews;
 	}
@@ -13,5 +22,4 @@ public class NewsPreviewMass extends BasePreviewMass {
 		this.mpnews = mpnews;
 	}
 
-	
 }

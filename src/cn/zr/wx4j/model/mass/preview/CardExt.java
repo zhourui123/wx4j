@@ -6,6 +6,14 @@ public class CardExt {
 	private String timestamp;
 	private String signature;
 
+	public CardExt(String code, String openid, String timestamp, String signature) {
+		super();
+		this.code = code;
+		this.openid = openid;
+		this.timestamp = timestamp;
+		this.signature = signature;
+	}
+
 	public String getCode() {
 		return code;
 	}

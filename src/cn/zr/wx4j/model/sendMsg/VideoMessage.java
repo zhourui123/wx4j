@@ -1,15 +1,26 @@
 package cn.zr.wx4j.model.sendMsg;
 
+import cn.zr.wx4j.model.container.VideoDescriptionContainer;
 
-public class VideoMessage extends Message {
+public class VideoMessage extends BaseMessage {
 
-	private Video Video;
+	private VideoDescriptionContainer Video;
 
-	public Video getVideo() {
+	public VideoMessage() {
+		super();
+	}
+
+	public VideoMessage(String toUserName, String fromUserName, Long createTime, String msgType,
+			cn.zr.wx4j.model.container.VideoDescriptionContainer video) {
+		super(toUserName, fromUserName, createTime, msgType);
+		Video = video;
+	}
+
+	public VideoDescriptionContainer getVideo() {
 		return Video;
 	}
 
-	public void setVideo(Video video) {
+	public void setVideo(VideoDescriptionContainer video) {
 		Video = video;
 	}
 

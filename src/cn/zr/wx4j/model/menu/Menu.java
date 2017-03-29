@@ -2,13 +2,22 @@ package cn.zr.wx4j.model.menu;
 
 public class Menu {
 
-	private Button[] button;
+	private BaseButton[] button;
 
-	public Button[] getButton() {
+	public Menu() {
+		super();
+	}
+
+	public Menu(BaseButton[] button) {
+		super();
+		this.button = button;
+	}
+
+	public BaseButton[] getButton() {
 		return button;
 	}
 
-	public void setButton(Button[] button) {
+	public void setButton(BaseButton[] button) {
 		this.button = button;
 	}
 }

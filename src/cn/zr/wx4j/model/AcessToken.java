@@ -6,6 +6,17 @@ public class AcessToken {
 		return expires_in;
 	}
 
+	public AcessToken(int expires_in, String access_token) {
+		super();
+		this.expires_in = expires_in;
+		this.access_token = access_token;
+	}
+
+	public AcessToken() {
+		super();
+
+	}
+
 	public void setExpires_in(int expires_in) {
 		this.expires_in = expires_in;
 	}

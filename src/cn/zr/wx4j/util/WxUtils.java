@@ -8,8 +8,8 @@ import com.qq.weixin.mp.aes.WXBizMsgCrypt;
 import com.thoughtworks.xstream.XStream;
 
 import cn.zr.wx4j.model.AcessToken;
-import cn.zr.wx4j.model.sendMsg.Item;
-import cn.zr.wx4j.model.sendMsg.Message;
+import cn.zr.wx4j.model.container.ArticleDescriptionContainer;
+import cn.zr.wx4j.model.sendMsg.BaseMessage;
 import cn.zr.wx4j.model.sendMsg.NewsMessage;
 
 public class WxUtils {
@@ -137,7 +137,7 @@ public class WxUtils {
 	 * @param <T>
 	 * 
 	 */
-	public static String message2Xml(Message message) {
+	public static String message2Xml(BaseMessage message) {
 		XStream xs = new XStream();
 		xs.alias("xml", message.getClass());
 		// xs.alias("item", Item.class);T
@@ -152,7 +152,7 @@ public class WxUtils {
 	public static String news2Xml(NewsMessage news) {
 		XStream xs = new XStream();
 		xs.alias("xml", NewsMessage.class);
-		xs.alias("item", Item.class);
+		xs.alias("item", ArticleDescriptionContainer.class);
 
 		return xs.toXML(news);
 

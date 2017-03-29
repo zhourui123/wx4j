@@ -18,6 +18,22 @@ public class NewsMaterial {
 	// 图文消息的原文地址，即点击“阅读原文”后的URL 必须
 	private String content_source_url;
 
+	public NewsMaterial() {
+		super();
+	}
+
+	public NewsMaterial(String title, String thumb_media_id, String author, String digest, String show_cover_pic,
+			String content, String content_source_url) {
+		super();
+		this.title = title;
+		this.thumb_media_id = thumb_media_id;
+		this.author = author;
+		this.digest = digest;
+		this.show_cover_pic = show_cover_pic;
+		this.content = content;
+		this.content_source_url = content_source_url;
+	}
+
 	public String getTitle() {
 		return title;
 	}

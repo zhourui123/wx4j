@@ -1,14 +1,26 @@
 package cn.zr.wx4j.model.sendMsg;
 
-public class MusicMessage extends Message {
-	
-	private Music Music;
+import cn.zr.wx4j.model.container.MusicDescriptionContainer;
 
-	public Music getMusic() {
+public class MusicMessage extends BaseMessage {
+	
+	private MusicDescriptionContainer Music;
+
+	public MusicMessage() {
+		super();
+	}
+
+	public MusicMessage(String toUserName, String fromUserName, Long createTime, String msgType,
+			cn.zr.wx4j.model.container.MusicDescriptionContainer music) {
+		super(toUserName, fromUserName, createTime, msgType);
+		Music = music;
+	}
+
+	public MusicDescriptionContainer getMusic() {
 		return Music;
 	}
 
-	public void setMusic(Music music) {
+	public void setMusic(MusicDescriptionContainer music) {
 		Music = music;
 	}
 }

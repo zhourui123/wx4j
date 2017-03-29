@@ -2,7 +2,7 @@ package cn.zr.wx4j.util;
 
 import java.io.UnsupportedEncodingException;
 
-import cn.zr.wx4j.model.menu.Button;
+import cn.zr.wx4j.model.menu.BaseButton;
 import cn.zr.wx4j.model.menu.ConditionalMenu;
 import cn.zr.wx4j.model.menu.Menu;
 import cn.zr.wx4j.model.menu.ViewButton;
@@ -93,7 +93,7 @@ public class MenuUtils {
 
 		Menu m = new Menu();
 
-		Button b1 = new Button();
+		BaseButton b1 = new BaseButton();
 		b1.setName("客户服务");
 		ViewButton b11 = new ViewButton();
 		b11.setName("测试1");
@@ -112,9 +112,9 @@ public class MenuUtils {
 		b14.setType(ButtonType.VIEW);
 
 		b14.setUrl("http://www.zhour.net");
-		b1.setSub_button(new Button[] { b11, b12, b13, b14 });
+		b1.setSub_button(new BaseButton[] { b11, b12, b13, b14 });
 
-		Button b2 = new Button();
+		BaseButton b2 = new BaseButton();
 		b2.setName("infomation");
 		ViewButton b21 = new ViewButton();
 		b21.setName("官网");
@@ -125,14 +125,14 @@ public class MenuUtils {
 		b22.setType(ButtonType.VIEW);
 		b22.setUrl("http://www.zhour.net");
 
-		b2.setSub_button(new Button[] { b21, b22 });
+		b2.setSub_button(new BaseButton[] { b21, b22 });
 
 		ViewButton b3 = new ViewButton();
 		b3.setName("联系我们");
 		b3.setType(ButtonType.VIEW);
 		b3.setUrl("http://www.zhour.net");
 
-		m.setButton(new Button[] { b1, b2, b3 });
+		m.setButton(new BaseButton[] { b1, b2, b3 });
 		// return m;
 		return m;
 	}

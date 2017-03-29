@@ -1,15 +1,26 @@
 package cn.zr.wx4j.model.sendMsg;
 
+import cn.zr.wx4j.model.container.MediaIdContainer;
 
-public class VoiceMessage extends Message {
+public class VoiceMessage extends BaseMessage {
 
-	private Voice Voice;
+	private MediaIdContainer Voice;
 
-	public Voice getVoice() {
+	public VoiceMessage() {
+		super();
+	}
+
+	public VoiceMessage(String toUserName, String fromUserName, Long createTime, String msgType,
+			MediaIdContainer voice) {
+		super(toUserName, fromUserName, createTime, msgType);
+		Voice = voice;
+	}
+
+	public MediaIdContainer getVoice() {
 		return Voice;
 	}
 
-	public void setVoice(Voice voice) {
+	public void setVoice(MediaIdContainer voice) {
 		Voice = voice;
 	}
 

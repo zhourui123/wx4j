@@ -1,14 +1,26 @@
 package cn.zr.wx4j.model.sendMsg;
 
-public class ImageMessage extends Message {
+import cn.zr.wx4j.model.container.MediaIdContainer;
 
-	private Image Image;
+public class ImageMessage extends BaseMessage {
 
-	public Image getImage() {
+	private MediaIdContainer Image;
+
+	public ImageMessage() {
+		super();
+	}
+
+	public ImageMessage(String toUserName, String fromUserName, Long createTime, String msgType,
+			MediaIdContainer image) {
+		super(toUserName, fromUserName, createTime, msgType);
+		Image = image;
+	}
+
+	public MediaIdContainer getImage() {
 		return Image;
 	}
 
-	public void setImage(Image image) {
+	public void setImage(MediaIdContainer image) {
 		Image = image;
 	}
 

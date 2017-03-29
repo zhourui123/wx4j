@@ -7,6 +7,19 @@ public class ReceiveMessage {
 	private String MsgType;
 	private String MsgId;
 
+	public ReceiveMessage() {
+		super();
+	}
+
+	public ReceiveMessage(Long createTime, String toUserName, String fromUserName, String msgType, String msgId) {
+		super();
+		CreateTime = createTime;
+		ToUserName = toUserName;
+		FromUserName = fromUserName;
+		MsgType = msgType;
+		MsgId = msgId;
+	}
+
 	public void setCreateTime(Long createTime) {
 		CreateTime = createTime;
 	}

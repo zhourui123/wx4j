@@ -5,6 +5,18 @@ public class ReceiveLocationEvent extends ReceiveEvent {
 	private String Longitude;// 地理位置经度
 	private String Precision;// 地理位置精度
 
+	public ReceiveLocationEvent() {
+		super();
+	}
+
+	public ReceiveLocationEvent(String toUserName, String fromUserName, Long createTime, String msgType, String event,
+			String latitude, String longitude, String precision) {
+		super(toUserName, fromUserName, createTime, msgType, event);
+		Latitude = latitude;
+		Longitude = longitude;
+		Precision = precision;
+	}
+
 	public String getLatitude() {
 		return Latitude;
 	}

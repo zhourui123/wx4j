@@ -2,7 +2,6 @@ package cn.zr.wx4j.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.lang.reflect.Proxy;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Map;
@@ -33,7 +32,6 @@ import cn.zr.wx4j.model.receiveMsg.ReceiveTextMessage;
 import cn.zr.wx4j.model.receiveMsg.ReceiveVideoMessage;
 import cn.zr.wx4j.model.receiveMsg.ReceiveVoiceMessage;
 import cn.zr.wx4j.open.WxAdapter;
-import cn.zr.wx4j.open.WxAdapterInvocationHandler;
 import cn.zr.wx4j.util.MenuUtils;
 import cn.zr.wx4j.util.MessageType;
 import cn.zr.wx4j.util.MyUtils;

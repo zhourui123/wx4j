@@ -4,6 +4,16 @@ public class KefuInvite {
 	private String kf_account;
 	private String invite_wx;
 
+	public KefuInvite(String kf_account, String invite_wx) {
+		super();
+		this.kf_account = kf_account;
+		this.invite_wx = invite_wx;
+	}
+
+	public KefuInvite() {
+		super();
+	}
+
 	public String getKf_account() {
 		return kf_account;
 	}

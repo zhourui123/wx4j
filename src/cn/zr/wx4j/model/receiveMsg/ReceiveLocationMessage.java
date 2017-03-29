@@ -6,6 +6,19 @@ public class ReceiveLocationMessage extends ReceiveMessage {
 	private String Label;
 	private String Scale;
 
+	public ReceiveLocationMessage() {
+		super();
+	}
+
+	public ReceiveLocationMessage(Long createTime, String toUserName, String fromUserName, String msgType, String msgId,
+			String location_X, String location_Y, String label, String scale) {
+		super(createTime, toUserName, fromUserName, msgType, msgId);
+		Location_X = location_X;
+		Location_Y = location_Y;
+		Label = label;
+		Scale = scale;
+	}
+
 	public String getLocation_X() {
 		return Location_X;
 	}

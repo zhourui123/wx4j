@@ -4,6 +4,16 @@ public class BaseMassWithOpenId {
 	private String msgtype;
 	private String[] touser;
 
+	public BaseMassWithOpenId(String msgtype, String[] touser) {
+		super();
+		this.msgtype = msgtype;
+		this.touser = touser;
+	}
+
+	public BaseMassWithOpenId() {
+		super();
+	}
+
 	public String getMsgtype() {
 		return msgtype;
 	}

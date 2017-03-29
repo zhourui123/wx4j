@@ -1,14 +1,7 @@
 package cn.zr.wx4j.test;
 
 import java.util.Map;
-import java.util.Set;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import cn.zr.wx4j.exception.IllegalFileNameException;
-import cn.zr.wx4j.model.material.VideoDescription;
-import cn.zr.wx4j.model.menu.Button;
+import cn.zr.wx4j.model.menu.BaseButton;
 import cn.zr.wx4j.model.menu.Menu;
 import cn.zr.wx4j.model.menu.ViewButton;
 import cn.zr.wx4j.model.receiveEvent.ReceiveClickMenuEvent;
@@ -26,19 +19,10 @@ import cn.zr.wx4j.model.receiveMsg.ReceiveShortvideoMessage;
 import cn.zr.wx4j.model.receiveMsg.ReceiveTextMessage;
 import cn.zr.wx4j.model.receiveMsg.ReceiveVideoMessage;
 import cn.zr.wx4j.model.receiveMsg.ReceiveVoiceMessage;
-import cn.zr.wx4j.model.sendMsg.Image;
-import cn.zr.wx4j.model.sendMsg.ImageMessage;
 import cn.zr.wx4j.model.sendMsg.TextMessage;
-import cn.zr.wx4j.model.sendMsg.Video;
-import cn.zr.wx4j.model.sendMsg.VideoMessage;
-import cn.zr.wx4j.model.sendMsg.Voice;
-import cn.zr.wx4j.model.sendMsg.VoiceMessage;
 import cn.zr.wx4j.open.AbstractWxAdapter;
 import cn.zr.wx4j.util.ButtonType;
-import cn.zr.wx4j.util.MaterialType;
-import cn.zr.wx4j.util.MenuUtils;
 import cn.zr.wx4j.util.MessageType;
-import cn.zr.wx4j.util.WxUtils;
 
 public class WxAdapterImpl extends AbstractWxAdapter {
 
@@ -49,7 +33,7 @@ public class WxAdapterImpl extends AbstractWxAdapter {
 		System.out.println("on create menu");
 		Menu m = new Menu();
 
-		Button b1 = new Button();
+		BaseButton b1 = new BaseButton();
 		b1.setName("客户服务");
 		ViewButton b11 = new ViewButton();
 		b11.setName("订单位置查询");
@@ -68,9 +52,9 @@ public class WxAdapterImpl extends AbstractWxAdapter {
 		b14.setType(ButtonType.VIEW);
 
 		b14.setUrl("SERVER_ADDRESS/suggestion.html".replace("SERVER_ADDRESS", serverName));
-		b1.setSub_button(new Button[] { b11, b12, b13, b14 });
+		b1.setSub_button(new BaseButton[] { b11, b12, b13, b14 });
 
-		Button b2 = new Button();
+		BaseButton b2 = new BaseButton();
 		b2.setName("公司信息");
 		ViewButton b21 = new ViewButton();
 		b21.setName("公司官网");
@@ -81,14 +65,14 @@ public class WxAdapterImpl extends AbstractWxAdapter {
 		b22.setType(ButtonType.VIEW);
 		b22.setUrl("SERVER_ADDRESS/driverHome.html".replace("SERVER_ADDRESS", serverName));
 
-		b2.setSub_button(new Button[] { b21, b22 });
+		b2.setSub_button(new BaseButton[] { b21, b22 });
 
 		ViewButton b3 = new ViewButton();
 		b3.setName("联系我们");
 		b3.setType(ButtonType.VIEW);
 		b3.setUrl("SERVER_ADDRESS/collaborate.html".replace("SERVER_ADDRESS", serverName));
 
-		m.setButton(new Button[] { b1, b2, b3 });
+		m.setButton(new BaseButton[] { b1, b2, b3 });
 		// return m;
 		return m;
 	}
